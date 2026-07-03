@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,8 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #eaeaea; /* modern professional gray */
+      background: #eaeaea;
+      /* modern professional gray */
       color: #333;
       scroll-behavior: smooth;
       position: relative;
@@ -30,7 +32,8 @@
       height: 55%;
       background: url('huc-logo.png') no-repeat center;
       background-size: contain;
-      filter: blur(1px); /* stronger watermark */
+      filter: blur(1px);
+      /* stronger watermark */
       opacity: 0.08;
       transform: translate(-50%, -50%) translateY(var(--scroll, 0px));
       z-index: -1;
@@ -44,6 +47,7 @@
       overflow: hidden;
       z-index: 2;
     }
+
     .logo-container img {
       display: block;
       max-width: 230px;
@@ -56,53 +60,71 @@
       left: -75%;
       width: 50%;
       height: 100%;
-      background: linear-gradient(120deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 100%);
+      background: linear-gradient(120deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
       transform: skewX(-25deg);
     }
+
     .logo-container:hover::after {
       animation: shine 1.2s forwards;
     }
+
     @keyframes shine {
-      100% { left: 125%; }
+      100% {
+        left: 125%;
+      }
     }
 
     /* Auto-shine */
     .auto-shine::after {
       animation: autoShine 6s infinite;
     }
+
     @keyframes autoShine {
-      0% { left: -75%; }
-      10% { left: 125%; }
-      100% { left: 125%; }
+      0% {
+        left: -75%;
+      }
+
+      10% {
+        left: 125%;
+      }
+
+      100% {
+        left: 125%;
+      }
     }
 
     /* Navigation Bar */
     nav {
       background-color: #0f2e20;
       padding: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
       position: sticky;
       top: 0;
       z-index: 5;
     }
+
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
       gap: 40px;
     }
+
     nav ul li {
       position: relative;
     }
+
     nav a {
       color: white;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s ease;
     }
+
     nav a:hover {
       color: #c2b280;
     }
+
     .dropdown {
       display: none;
       position: absolute;
@@ -112,57 +134,60 @@
       border-radius: 8px;
       min-width: 180px;
     }
+
     .dropdown li {
       padding: 10px 15px;
     }
+
     .dropdown li a {
       color: white;
     }
+
     nav ul li:hover .dropdown {
       display: block;
     }
 
     header {
-  background: linear-gradient(135deg, #0f2e20 0%, #5f6844 45%, #c2b280 100%);
-  color: white;
-  text-align: center;
-  padding: 25px 20px 20px;
-  min-height: 28vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  box-shadow: 0 4px 20px rgba(0,0,0,.5);
-  position: relative;
-  z-index: 2;
-}
+      background: linear-gradient(135deg, #0f2e20 0%, #5f6844 45%, #c2b280 100%);
+      color: white;
+      text-align: center;
+      padding: 25px 20px 20px;
+      min-height: 28vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .5);
+      position: relative;
+      z-index: 2;
+    }
 
-header .logo-container {
-  margin: 0 auto 0;
-  display: block;
-  text-align: center;
-}
+    header .logo-container {
+      margin: 0 auto 0;
+      display: block;
+      text-align: center;
+    }
 
-header .logo-container img {
-  max-width: 320px;
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-}
+    header .logo-container img {
+      max-width: 320px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
 
-header h1 {
-  font-size: clamp(2.7rem, 6vw, 4rem);
-  margin: 0 0 4px;
-  letter-spacing: 1px;
-  text-shadow: 3px 3px 8px rgba(0,0,0,.65);
-}
+    header h1 {
+      font-size: clamp(2.7rem, 6vw, 4rem);
+      margin: 0 0 4px;
+      letter-spacing: 1px;
+      text-shadow: 3px 3px 8px rgba(0, 0, 0, .65);
+    }
 
-header p {
-  font-size: 1.35rem;
-  font-weight: 600;
-  margin: 0;
-  text-shadow: 2px 2px 5px rgba(0,0,0,.6);
-}
+    header p {
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin: 0;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, .6);
+    }
 
     main {
       max-width: 1100px;
@@ -177,14 +202,17 @@ header p {
       background: white;
       padding: 40px;
       border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     }
+
     section h2 {
       font-size: 2rem;
       margin-bottom: 20px;
       color: #0f2e20;
     }
-    section p, section li {
+
+    section p,
+    section li {
       font-size: 1.1rem;
       line-height: 1.6;
     }
@@ -195,28 +223,33 @@ header p {
       gap: 20px;
       margin-top: 30px;
     }
+
     .image-gallery img {
       width: 100%;
       border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
+
     .image-gallery img:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
     /* Reviews Carousel */
     .reviews-container {
       overflow: hidden;
       position: relative;
-      min-height: 200px; /* reserve space for absolutely positioned reviews */
+      min-height: 200px;
+      /* reserve space for absolutely positioned reviews */
     }
+
     .reviews-slider {
       position: relative;
       display: block;
       width: 100%;
     }
+
     .review {
       position: absolute;
       left: 0;
@@ -227,20 +260,61 @@ header p {
       opacity: 0;
       transition: opacity 0.6s ease-in-out;
     }
+
     .review.active {
       opacity: 1;
-      position: relative; /* keep active item in document flow for accessibility */
+      position: relative;
+      /* keep active item in document flow for accessibility */
     }
+
     .review img {
       width: 60px;
       height: 60px;
       border-radius: 50%;
       margin-bottom: 10px;
     }
+
     .review h4 {
       margin-bottom: 8px;
       font-size: 1.1rem;
       color: #0f2e20;
+    }
+
+    .stars {
+      color: #f5b301;
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .review-avatar {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, .15);
+    }
+
+    .avatar-j {
+      background: #f4511e;
+    }
+
+    .avatar-jayne {
+      background: #ff7043;
+    }
+
+    .avatar-n {
+      background: #689f38;
+    }
+
+    .avatar-s {
+      background: #7e57c2;
     }
 
     /* Contact Form */
@@ -248,32 +322,40 @@ header p {
       display: grid;
       gap: 15px;
     }
-    input, textarea, button {
+
+    input,
+    textarea,
+    button {
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 8px;
       font-size: 1rem;
       width: 100%;
     }
+
     button {
       background-color: #0f2e20;
       color: white;
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
     button:hover {
       background-color: #c2b280;
       color: #000;
     }
+
     .form-success {
       display: none;
       color: green;
       font-weight: bold;
       margin-top: 15px;
     }
-footer {
-  margin-top: 40px;
-}
+
+    footer {
+      margin-top: 40px;
+    }
+
     /* Footer */
     .footer-top {
       display: flex;
@@ -283,47 +365,90 @@ footer {
       padding: 40px 20px;
       background-color: #111;
       color: white;
-      font-weight: bold; /* bolder font */
+      font-weight: bold;
+      /* bolder font */
       position: relative;
       z-index: 2;
-      border-top: 1px solid rgba(255,255,255,0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
+
     .footer-section h3 {
-      margin-bottom: 20px; /* add spacing */
-      font-size: 1.5rem; /* subtitle size */
-      text-decoration: underline; /* underline for emphasis */
+      margin-bottom: 20px;
+      /* add spacing */
+      font-size: 1.5rem;
+      /* subtitle size */
+      text-decoration: underline;
+      /* underline for emphasis */
       color: #c2b280;
     }
-    .footer-section p, .footer-section ul li {
+
+    .footer-section p,
+    .footer-section ul li {
       font-size: 1.05rem;
     }
+
     .footer-section em {
       display: block;
-      margin-top: 10px; /* spacing for Coming Soon */
+      margin-top: 10px;
+      /* spacing for Coming Soon */
     }
 
     .social-icons {
       text-align: center;
-      margin-bottom: 20px;
+      padding: 35px 20px 20px;
       position: relative;
       z-index: 2;
     }
+
+    .social-icons h3 {
+      font-size: 1.8rem;
+      color: #0f2e20;
+      margin-bottom: 8px;
+    }
+
+    .social-icons p {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
     .social-icons a {
-      margin: 0 10px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 62px;
+      height: 62px;
+      margin: 0 12px;
+      border-radius: 50%;
+      background: white;
       font-size: 2rem;
       text-decoration: none;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, .15);
+      transition: all .3s ease;
     }
-    .social-icons .instagram { color: #E1306C; }
-    .social-icons .tiktok { color: #000; }
+
+    .social-icons a:hover {
+      transform: translateY(-6px) scale(1.08);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, .25);
+    }
+
+    .social-icons .instagram {
+      color: #E1306C;
+    }
+
+    .social-icons .tiktok {
+      color: #000;
+    }
 
     .footer-logo {
       text-align: center;
-      margin: 20px 0;
+      margin: 5px 0 35px;
       position: relative;
       z-index: 2;
     }
+
     .footer-logo .logo-container img {
-      max-width: 150px;
+      max-width: 185px;
     }
 
     footer {
@@ -334,215 +459,252 @@ footer {
       font-size: 0.9rem;
       position: relative;
       z-index: 2;
-}
+    }
 
-/* About Us enhancements */
-.about-lead {
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.25rem;
-}
+    /* About Us enhancements */
+    .about-lead {
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.25rem;
+    }
 
-.about-signature {
-  margin-top: 1.25rem;
-  text-align: center;
-  font-weight: 600;
-  font-style: italic;
-  opacity: 0.9;
-}
+    .about-signature {
+      margin-top: 1.25rem;
+      text-align: center;
+      font-weight: 600;
+      font-style: italic;
+      opacity: 0.9;
+    }
 
-.about-photo {
-  float: left;
-  margin: 0 22px 16px 0;
-  width: 220px;
-  height: auto;
-  border-radius: 12px;
-  opacity: 0.95;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
-}
+    .about-photo {
+      float: left;
+      margin: 0 22px 16px 0;
+      width: 220px;
+      height: auto;
+      border-radius: 12px;
+      opacity: 0.95;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
 
-/* makes the section "contain" the floated image */
-.about-content::after {
-  content: "";
-  display: block;
-  clear: both;
-}
+    /* makes the section "contain" the floated image */
+    .about-content::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
 
-/* Our Services enhancements */
-.services-content {
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
+    /* Our Services enhancements */
+    .services-content {
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
 
-.services-content p {
-  margin-bottom: 1.25rem;
-}
+    .services-content p {
+      margin-bottom: 1.25rem;
+    }
 
-.services-brand {
-  font-weight: 700;
-  font-size: 1.1em;
-  letter-spacing: 0.4px;
-}
+    .services-brand {
+      font-weight: 700;
+      font-size: 1.1em;
+      letter-spacing: 0.4px;
+    }
 
-.services-signature {
-  font-style: italic;
-  font-weight: 600;
-  opacity: 0.9;
-}
+    .services-signature {
+      font-style: italic;
+      font-weight: 600;
+      opacity: 0.9;
+    }
 
-.work-disclaimer {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 0.8rem;
-  font-style: italic;
-  color:#999;
-  opacity: 0.45;
-}
-/* ===== Our Work (Horizontal Slider) ===== */
-.our-work {
-  padding: 48px 18px;
-} 
+    .work-disclaimer {
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.8rem;
+      font-style: italic;
+      color: #999;
+      opacity: 0.45;
+    }
 
-.work-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  margin-bottom: 14px;
-}
+    /* ===== Our Work (Horizontal Slider) ===== */
+    .our-work {
+      padding: 48px 18px;
+    }
 
-.work-controls {
-  display: flex;
-  gap: 10px;
-}
+    .work-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
 
-.work-btn {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  border: 1px solid rgba(0,0,0,.12);
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(8px);
-  cursor: pointer;
-  font-size: 22px;
-  line-height: 1;
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
-  transition: transform .15s ease, opacity .15s ease;
-}
-.work-btn:hover { transform: translateY(-1px); }
-.work-btn:active { transform: scale(.98); }
+    .work-controls {
+      display: flex;
+      gap: 10px;
+    }
 
-.work-carousel {
-  position: relative;
-  overflow: hidden;            /* IMPORTANT: prevents stacking / overflow */
-  border-radius: 18px;
-}
+    .work-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid rgba(0, 0, 0, .12);
+      background: rgba(255, 255, 255, .85);
+      backdrop-filter: blur(8px);
+      cursor: pointer;
+      font-size: 22px;
+      line-height: 1;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+      transition: transform .15s ease, opacity .15s ease;
+    }
 
-.work-track {
-  display: flex;
-  gap: 18px;
-  padding: 10px;
-  will-change: transform;
-  transform: translate3d(0,0,0);
-  transition: transform 520ms cubic-bezier(.2,.9,.2,1);
-}
+    .work-btn:hover {
+      transform: translateY(-1px);
+    }
 
-/* This makes each image act like a “card” */
-.work-track img {
-  flex: 0 0 calc(100% - 20px);  /* 1 visible on mobile */
-  height: 320px;
-  object-fit: cover;
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(0,0,0,.10);
-  display: block;
-  transform: translateZ(0) scale(1.02);
-  transition: transform 300ms ease;
-}
-.work-track .work-media {
-  flex: 0 0 calc(100% - 20px);
-  height: 320px;
-  border-radius: 18px;
-  box-shadow: 0 18px 45px rgba(0,0,0,.10);
-  display: block;
-  object-fit: cover;
-  background: #000;
-}
-.work-track video.work-media {
-  object-fit: cover;
-  background: #000;
-}
+    .work-btn:active {
+      transform: scale(.98);
+    }
 
-@media (min-width: 720px) {
-  .work-track .work-media { flex-basis: calc(50% - 18px); }
-}
+    .work-carousel {
+      position: relative;
+      overflow: hidden;
+      /* IMPORTANT: prevents stacking / overflow */
+      border-radius: 18px;
+    }
 
-@media (min-width: 1024px) {
-  .work-track .work-media { flex-basis: calc(33.333% - 18px); }
-}
+    .work-track {
+      display: flex;
+      gap: 18px;
+      padding: 10px;
+      will-change: transform;
+      transform: translate3d(0, 0, 0);
+      transition: transform 520ms cubic-bezier(.2, .9, .2, 1);
+    }
 
-.work-track img:hover {
-  transform: translateZ(0) scale(1.06);
-}
+    /* This makes each image act like a “card” */
+    .work-track img {
+      flex: 0 0 calc(100% - 20px);
+      /* 1 visible on mobile */
+      height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, .10);
+      display: block;
+      transform: translateZ(0) scale(1.02);
+      transition: transform 300ms ease;
+    }
 
-@media (min-width: 720px) {
-  .work-track img { flex-basis: calc(50% - 18px); } /* 2 visible */
-}
+    .work-track .work-media {
+      flex: 0 0 calc(100% - 20px);
+      height: 320px;
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, .10);
+      display: block;
+      object-fit: cover;
+      background: #000;
+    }
 
-@media (min-width: 1024px) {
-  .work-track img { flex-basis: calc(33.333% - 18px); } /* 3 visible */
-}
+    .work-track video.work-media {
+      object-fit: cover;
+      background: #000;
+    }
 
-/* dots */
-.work-dots {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 14px;
-}
-.work-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 999px;
-  border: 0;
-  background: rgba(0,0,0,.18);
-  cursor: pointer;
-  transition: width .2s ease, background .2s ease, transform .15s ease;
-}
-.work-dot[aria-current="true"] {
-  width: 24px;
-  background: rgba(0,0,0,.45);
-}
-.work-dot:active { transform: scale(.95); }
+    @media (min-width: 720px) {
+      .work-track .work-media {
+        flex-basis: calc(50% - 18px);
+      }
+    }
 
-@media (prefers-reduced-motion: reduce) {
-  .work-track { transition: none; }
-  .work-track img { transition: none; }
-}
-@media (max-width: 600px) {
-  header .logo-container {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-  }
-  header .logo-container img {
-    max-width: 260px;
-    display: block;
-    margin: 0 auto;
-  }
-  header h1 {
-    font-size: 2.4rem;
-  }
-  header p {
-    font-size: 1.05rem;
-  }
-}
+    @media (min-width: 1024px) {
+      .work-track .work-media {
+        flex-basis: calc(33.333% - 18px);
+      }
+    }
 
-</style>
+    .work-track img:hover {
+      transform: translateZ(0) scale(1.06);
+    }
 
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    @media (min-width: 720px) {
+      .work-track img {
+        flex-basis: calc(50% - 18px);
+      }
+
+      /* 2 visible */
+    }
+
+    @media (min-width: 1024px) {
+      .work-track img {
+        flex-basis: calc(33.333% - 18px);
+      }
+
+      /* 3 visible */
+    }
+
+    /* dots */
+    .work-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .work-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(0, 0, 0, .18);
+      cursor: pointer;
+      transition: width .2s ease, background .2s ease, transform .15s ease;
+    }
+
+    .work-dot[aria-current="true"] {
+      width: 24px;
+      background: rgba(0, 0, 0, .45);
+    }
+
+    .work-dot:active {
+      transform: scale(.95);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .work-track {
+        transition: none;
+      }
+
+      .work-track img {
+        transition: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header .logo-container {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+      }
+
+      header .logo-container img {
+        max-width: 260px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      header h1 {
+        font-size: 2.4rem;
+      }
+
+      header p {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
   <!-- Navigation Bar -->
   <nav>
@@ -577,134 +739,148 @@ footer {
   </header>
 
   <main>
-    <section>
+    <section id="about">
       <h2>About Us</h2>
       <div class="about-content">
-  <img class="about-photo" src="images/main-1.jpeg" alt="Founder of Higher Up Consulting">
-  <h3 class="about-lead">Higher Up Consulting</h3>
+        <img class="about-photo" src="images/main-1.jpeg" alt="Founder of Higher Up Consulting">
+        <h3 class="about-lead">Higher Up Consulting</h3>
 
-<p>
-  is a founder-led, veteran-owned restoration and roofing firm built on discipline, precision, and elevated standards. With over four years of hands-on industry experience, we specialize in restoring residential properties using higher-grade materials and proven systems designed for long-term performance.
-</p>
+        <p>
+          is a founder-led, veteran-owned restoration and roofing firm built on discipline, precision, and elevated
+          standards. With over four years of hands-on industry experience, we specialize in restoring residential
+          properties using higher-grade materials and proven systems designed for long-term performance.
+        </p>
 
-<p>
-  We don’t believe in shortcuts or bargain materials. Every project is executed with attention to detail, modern code compliance, and the same level of care we would expect for our own homes.
-</p>
+        <p>
+          We don’t believe in shortcuts or bargain materials. Every project is executed with attention to detail, modern
+          code compliance, and the same level of care we would expect for our own homes.
+        </p>
 
-<p class="about-signature">
-  At Higher Up Consulting, quality is intentional—and trust is earned.
-</p>
+        <p class="about-signature">
+          At Higher Up Consulting, quality is intentional—and trust is earned.
+        </p>
 
       </div>
     </section>
 
-    <section>
+    <section id="services">
       <h2>Our Services</h2>
       <div class="services-content">
+        <p class="services-intro">
+          <span class="services-brand">Higher Up Consulting</span> provides tailored roofing and exterior restoration
+          solutions, offering both retail services and insurance claim guidance. Our primary focus is residential
+          properties, with the capability to support commercial and interior restoration needs.
+        </p>
 
-  <p class="services-intro">
-    <span class="services-brand">Higher Up Consulting</span> provides tailored roofing and exterior restoration solutions, offering both retail services and insurance claim guidance. Our primary focus is residential properties, with the capability to support commercial and interior restoration needs.
-  </p>
+        <p>
+          We work closely with homeowners and property owners to align scope, materials, and execution with modern
+          standards and exceed them, utilizing higher-grade roofing systems and components engineered for durability,
+          performance, and long-term protection. Clear communication and thoughtful planning remain central to every
+          project.
+        </p>
 
-  <p>
-    We work closely with homeowners and property owners to align scope, materials, and execution with modern standards and exceed them, utilizing higher-grade roofing systems and components engineered for durability, performance, and long-term protection. Clear communication and thoughtful planning remain central to every project.
-  </p>
+        <p class="services-signature">
+          From initial inspection through completion, each project is managed with discipline, transparency, and refined
+          attention to detail, delivering confidence, consistency, and peace of mind.
+        </p>
 
-  <p class="services-signature">
-    From initial inspection through completion, each project is managed with discipline, transparency, and refined attention to detail, delivering confidence, consistency, and peace of mind.
-  </p>
-
-</div>
+      </div>
 
     </section>
 
     <section class="our-work">
-  <div class="work-header">
-    <h2>Trusted by Homeowners</h2>
+      <div class="work-header">
+        <h2>Trusted by Homeowners</h2>
 
-  </div>
+      </div>
 
-  <div class="work-carousel" data-carousel="trusted">
-  <div class="work-track" data-track>
-      <img src="images/work-1.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-      <img src="images/work-2.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-      <img src="images/work-3.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-      <img src="images/work-4.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-      <img src="images/work-5.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-      <img src="images/work-6.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-      <img src="images/work-7.jpeg" alt="Roofing Project managed by our team" loading="lazy">
-    </div>
-  </div>
+      <div class="work-carousel" data-carousel="trusted">
+        <div class="work-track" data-track>
+          <img src="images/work-1.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+          <img src="images/work-2.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+          <img src="images/work-3.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+          <img src="images/work-4.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+          <img src="images/work-5.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+          <img src="images/work-6.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+          <img src="images/work-7.jpeg" alt="Roofing Project managed by our team" loading="lazy">
+        </div>
+      </div>
 
-  <div class="work-dots" data-dots></div>
+      <div class="work-dots" data-dots></div>
 
-  <p class="work-disclaimer">
-    Select projects personally managed by our team, reflecting the standards we bring
-  </p>
-</section>
+      <p class="work-disclaimer">
+        Select projects personally managed by our team, reflecting the standards we bring
+      </p>
+    </section>
 
-<section class="our-work work-in-field">
-  <div class="work-header">
-    <h2>Work in the Field</h2>
-  </div>
+    <section class="our-work work-in-field">
+      <div class="work-header">
+        <h2>Work in the Field</h2>
+      </div>
 
-  <div class="work-carousel" data-carousel="field">
-    <div class="work-track" data-track>
-      <!-- Videos -->
-      <video class="work-media" autoplay muted loop playsinline preload="metadata" poster="images/field-3.jpeg">
-        <source src="images/field-1.mp4" type="video/mp4">
-      </video>
+      <div class="work-carousel" data-carousel="field">
+        <div class="work-track" data-track>
+          <!-- Videos -->
+          <video class="work-media" autoplay muted loop playsinline preload="metadata" poster="images/field-3.jpeg">
+            <source src="images/field-1.mp4" type="video/mp4">
+          </video>
 
-      <video class="work-media" autoplay muted loop playsinline preload="metadata" poster="images/field-4.jpeg">
-        <source src="images/field-2.mp4" type="video/mp4">
-      </video>
+          <video class="work-media" autoplay muted loop playsinline preload="metadata" poster="images/field-4.jpeg">
+            <source src="images/field-2.mp4" type="video/mp4">
+          </video>
 
-      <!-- Photos -->
-      <img src="images/field-3.jpeg" alt="Work in the field" loading="lazy">
-      <img src="images/field-4.jpeg" alt="Work in the field" loading="lazy">
-      <img src="images/field-5.jpeg" alt="Work in the field" loading="lazy">
-      <img src="images/field-6.jpeg" alt="Work in the field" loading="lazy">
-      <img src="images/field-7.jpeg" alt="Work in the field" loading="lazy">
-      <img src="images/field-8.jpeg" alt="Work in the field" loading="lazy">
-    </div>
-  </div>
+          <!-- Photos -->
+          <img src="images/field-3.jpeg" alt="Work in the field" loading="lazy">
+          <img src="images/field-4.jpeg" alt="Work in the field" loading="lazy">
+          <img src="images/field-5.jpeg" alt="Work in the field" loading="lazy">
+          <img src="images/field-6.jpeg" alt="Work in the field" loading="lazy">
+          <img src="images/field-7.jpeg" alt="Work in the field" loading="lazy">
+          <img src="images/field-8.jpeg" alt="Work in the field" loading="lazy">
+        </div>
+      </div>
 
-  <div class="work-dots" data-dots></div>
+      <div class="work-dots" data-dots></div>
 
-  <p class="work-disclaimer">
-    In-progress installs, inspections, and field footage.
-  </p>
-</section>
+      <p class="work-disclaimer">
+        In-progress installs, inspections, and field footage.
+      </p>
+    </section>
 
     <section>
       <h2>Reviews</h2>
       <div class="reviews-container">
         <div class="reviews-slider">
+
           <div class="review active">
-            <img src="https://via.placeholder.com/60" alt="Reviewer 1">
-            <h4>John M.</h4>
-            <p>“Higher Up Consulting replaced my roof flawlessly.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="review-avatar avatar-j">J</div>
+            <h4>Josue Casanova</h4>
+            <p>“Had the pleasure of this company putting a new roof on my aunt’s house. She’s older, but Rigo guided her
+              through the process and was very professional and punctual. Got our roof approved and they have State
+              Farm. Recommend giving him a call.”</p>
           </div>
+
           <div class="review">
-            <img src="https://via.placeholder.com/60" alt="Reviewer 2">
-            <h4>Susan K.</h4>
-            <p>“They handled my insurance claim and kept me updated.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="review-avatar avatar-jayne">J</div>
+            <h4>Jayne Kumar</h4>
+            <p>“Highly recommend, top quality and a very professional and friendly business you can trust.”</p>
           </div>
+
           <div class="review">
-            <img src="https://via.placeholder.com/60" alt="Reviewer 3">
-            <h4>Mike D.</h4>
-            <p>“Smooth process from inspection to installation.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="review-avatar avatar-n">N</div>
+            <h4>Nas Sullivan</h4>
+            <p>“Fast, reliable and amazing customer service.”</p>
           </div>
+
           <div class="review">
-            <img src="https://via.placeholder.com/60" alt="Reviewer 4">
-            <h4>Emily R.</h4>
-            <p>“Fantastic service and attention to detail.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="review-avatar avatar-s">S</div>
+            <h4>Sandy Girl</h4>
+            <p>“Honestly nice, professional, and clear communication!!!”</p>
           </div>
-          <div class="review">
-            <img src="https://via.placeholder.com/60" alt="Reviewer 5">
-            <h4>David P.</h4>
-            <p>“Quick, professional, and helpful with paperwork.”</p>
-          </div>
+
         </div>
       </div>
     </section>
@@ -730,8 +906,17 @@ footer {
   </main>
 
   <div class="social-icons">
-    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-    <a href="#" class="tiktok"><i class="fab fa-tiktok"></i></a>
+    <h3>Follow Our Journey</h3>
+    <p>From inspections to completed roof transformations, follow our work in the field every step of the way.</p>
+
+    <a href="https://www.instagram.com/higherupconsultingroof" target="_blank" rel="noopener noreferrer"
+      class="instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@hucroof" target="_blank" rel="noopener noreferrer" class="tiktok">
+      <i class="fab fa-tiktok"></i>
+    </a>
   </div>
 
   <div class="footer-logo">
@@ -748,7 +933,8 @@ footer {
     </div>
     <div class="footer-section">
       <h3>Contact</h3>
-      <p>Phone: <a href="tel:+14049310503">(404) 931-0503</a><br>Email: <a href="mailto:higherupconsultingroof@gmail.com">higherupconsultingroof@gmail.com</a></p>
+      <p>Phone: <a href="tel:+14049310503">(404) 931-0503</a><br>Email: <a
+          href="mailto:higherupconsultingroof@gmail.com">higherupconsultingroof@gmail.com</a></p>
     </div>
     <div class="footer-section">
       <h3>Services</h3>
@@ -814,200 +1000,201 @@ footer {
     }
   </script>
   <script>
-(() => {
+    (() => {
 
-  function initWorkCarousel(root) {
-    const carousel = root.querySelector('.work-carousel');
-    const track = root.querySelector('[data-track]');
-    const dotsWrap = root.querySelector('[data-dots]');
-    if (!carousel || !track) return;
+      function initWorkCarousel(root) {
+        const carousel = root.querySelector('.work-carousel');
+        const track = root.querySelector('[data-track]');
+        const dotsWrap = root.querySelector('[data-dots]');
+        if (!carousel || !track) return;
 
-    const AUTO_MS = 1250;
-    const PAUSE_AFTER_INTERACT = 1500;
+        const AUTO_MS = 1250;
+        const PAUSE_AFTER_INTERACT = 1500;
 
-    const getItems = () => Array.from(track.querySelectorAll('img, video'));
-    let originals = getItems();
-    const originalCount = originals.length;
-    if (originalCount === 0) return;
+        const getItems = () => Array.from(track.querySelectorAll('img, video'));
+        let originals = getItems();
+        const originalCount = originals.length;
+        if (originalCount === 0) return;
 
-    const waitForImages = () => Promise.all(
-      originals
-        .filter(el => el.tagName.toLowerCase() === 'img')
-        .map(img =>
-          img.complete
-            ? Promise.resolve()
-            : new Promise(res => {
-                img.addEventListener('load', res, { once: true });
-                img.addEventListener('error', res, { once: true });
-              })
-        )
-    );
+        const waitForImages = () => Promise.all(
+          originals
+            .filter(el => el.tagName.toLowerCase() === 'img')
+            .map(img =>
+              img.complete
+                ? Promise.resolve()
+                : new Promise(res => {
+                  img.addEventListener('load', res, { once: true });
+                  img.addEventListener('error', res, { once: true });
+                })
+            )
+        );
 
-    const perView = () => (innerWidth >= 1024 ? 3 : innerWidth >= 720 ? 2 : 1);
+        const perView = () => (innerWidth >= 1024 ? 3 : innerWidth >= 720 ? 2 : 1);
 
-    const stepPx = () => {
-      const items = getItems();
-      if (items.length < 1) return 0;
-      const a = items[0].getBoundingClientRect();
-      const b = items[1]?.getBoundingClientRect();
-      const step = b ? (b.left - a.left) : a.width;
-return step || (carousel.getBoundingClientRect().width / perView());
-    };
+        const stepPx = () => {
+          const items = getItems();
+          if (items.length < 1) return 0;
+          const a = items[0].getBoundingClientRect();
+          const b = items[1]?.getBoundingClientRect();
+          const step = b ? (b.left - a.left) : a.width;
+          return step || (carousel.getBoundingClientRect().width / perView());
+        };
 
-    let CLONES = perView();
-    let index = CLONES;
+        let CLONES = perView();
+        let index = CLONES;
 
-    const setTransform = (i, animate = true) => {
-      if (animate) track.style.transition = '';
-      else track.style.transition = 'none';
-      const step = stepPx();
-      track.style.transform = `translate3d(${-i * step}px, 0, 0)`;
-    };
+        const setTransform = (i, animate = true) => {
+          if (animate) track.style.transition = '';
+          else track.style.transition = 'none';
+          const step = stepPx();
+          track.style.transform = `translate3d(${-i * step}px, 0, 0)`;
+        };
 
-    const snapTo = (i) => setTransform(i, false);
-    const goTo = (i) => setTransform(i, true);
+        const snapTo = (i) => setTransform(i, false);
+        const goTo = (i) => setTransform(i, true);
 
-    const dotIndexFromTrackIndex = (i) => {
-      let d = (i - CLONES) % originalCount;
-      if (d < 0) d += originalCount;
-      return d;
-    };
+        const dotIndexFromTrackIndex = (i) => {
+          let d = (i - CLONES) % originalCount;
+          if (d < 0) d += originalCount;
+          return d;
+        };
 
-    const updateDots = () => {
-      if (!dotsWrap) return;
-      const currentDot = dotIndexFromTrackIndex(index);
-      [...dotsWrap.children].forEach((d, i) =>
-        d.setAttribute('aria-current', i === currentDot ? 'true' : 'false')
-      );
-    };
+        const updateDots = () => {
+          if (!dotsWrap) return;
+          const currentDot = dotIndexFromTrackIndex(index);
+          [...dotsWrap.children].forEach((d, i) =>
+            d.setAttribute('aria-current', i === currentDot ? 'true' : 'false')
+          );
+        };
 
-    const renderDots = () => {
-      if (!dotsWrap) return;
-      dotsWrap.innerHTML = '';
-      for (let i = 0; i < originalCount; i++) {
-        const btn = document.createElement('button');
-        btn.className = 'work-dot';
-        btn.type = 'button';
-        btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
-        btn.addEventListener('click', () => {
-          pauseAuto(PAUSE_AFTER_INTERACT);
-          index = CLONES + i;
-          goTo(index);
+        const renderDots = () => {
+          if (!dotsWrap) return;
+          dotsWrap.innerHTML = '';
+          for (let i = 0; i < originalCount; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'work-dot';
+            btn.type = 'button';
+            btn.setAttribute('aria-label', `Go to slide ${i + 1}`);
+            btn.addEventListener('click', () => {
+              pauseAuto(PAUSE_AFTER_INTERACT);
+              index = CLONES + i;
+              goTo(index);
+              updateDots();
+            });
+            dotsWrap.appendChild(btn);
+          }
+          updateDots();
+        };
+
+        const buildClones = () => {
+          track.innerHTML = '';
+          originals.forEach(el => track.appendChild(el));
+
+          CLONES = perView();
+          index = CLONES;
+
+          const current = getItems();
+
+          current.slice(-CLONES).forEach(el => {
+            const c = el.cloneNode(true);
+            c.setAttribute('data-clone', 'true');
+            track.insertBefore(c, track.firstChild);
+          });
+
+          current.slice(0, CLONES).forEach(el => {
+            const c = el.cloneNode(true);
+            c.setAttribute('data-clone', 'true');
+            track.appendChild(c);
+          });
+
+          renderDots();
+          snapTo(index);
+        };
+
+        track.addEventListener('transitionend', () => {
+          const maxRealStart = CLONES + (originalCount - 1);
+
+          if (index > maxRealStart) {
+            index = CLONES;
+            snapTo(index);
+          }
+
+          if (index < CLONES) {
+            index = CLONES + (originalCount - 1);
+            snapTo(index);
+          }
+
           updateDots();
         });
-        dotsWrap.appendChild(btn);
+
+        let autoTimer = null;
+        let pauseTimer = null;
+
+        const startAuto = () => {
+          stopAuto();
+          autoTimer = setInterval(() => {
+            index += 1;
+            goTo(index);
+            updateDots();
+          }, AUTO_MS);
+        };
+
+        const stopAuto = () => {
+          if (autoTimer) clearInterval(autoTimer);
+          autoTimer = null;
+        };
+
+        const pauseAuto = (ms = PAUSE_AFTER_INTERACT) => {
+          stopAuto();
+          if (pauseTimer) clearTimeout(pauseTimer);
+          pauseTimer = setTimeout(startAuto, ms);
+        };
+
+        carousel.addEventListener('pointerdown', () => pauseAuto(PAUSE_AFTER_INTERACT));
+        carousel.addEventListener('pointerup', () => pauseAuto(PAUSE_AFTER_INTERACT));
+        dotsWrap?.addEventListener('click', () => pauseAuto(PAUSE_AFTER_INTERACT));
+
+        let startX = 0;
+        let dragging = false;
+
+        carousel.addEventListener('pointerdown', (e) => {
+          dragging = true;
+          startX = e.clientX;
+          carousel.setPointerCapture(e.pointerId);
+        });
+
+        carousel.addEventListener('pointerup', (e) => {
+          if (!dragging) return;
+          dragging = false;
+          const dx = e.clientX - startX;
+          if (dx > 40) { index -= 1; goTo(index); }
+          if (dx < -40) { index += 1; goTo(index); }
+          updateDots();
+          pauseAuto(PAUSE_AFTER_INTERACT);
+        });
+
+        buildClones();
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => startAuto());
+        });
+
+        // try to force videos to start (autoplay-safe)
+        setTimeout(() => {
+          track.querySelectorAll('video').forEach(v => {
+            v.muted = true;
+            const p = v.play();
+            if (p) p.catch(() => { });
+          });
+        }, 200);
+
+        window.addEventListener('resize', () => buildClones());
       }
-      updateDots();
-    };
 
-    const buildClones = () => {
-      track.innerHTML = '';
-      originals.forEach(el => track.appendChild(el));
+      document.querySelectorAll('section.our-work').forEach(initWorkCarousel);
 
-      CLONES = perView();
-      index = CLONES;
-
-      const current = getItems();
-
-      current.slice(-CLONES).forEach(el => {
-        const c = el.cloneNode(true);
-        c.setAttribute('data-clone', 'true');
-        track.insertBefore(c, track.firstChild);
-      });
-
-      current.slice(0, CLONES).forEach(el => {
-        const c = el.cloneNode(true);
-        c.setAttribute('data-clone', 'true');
-        track.appendChild(c);
-      });
-
-      renderDots();
-      snapTo(index);
-    };
-
-    track.addEventListener('transitionend', () => {
-      const maxRealStart = CLONES + (originalCount - 1);
-
-      if (index > maxRealStart) {
-        index = CLONES;
-        snapTo(index);
-      }
-
-      if (index < CLONES) {
-        index = CLONES + (originalCount - 1);
-        snapTo(index);
-      }
-
-      updateDots();
-    });
-
-    let autoTimer = null;
-    let pauseTimer = null;
-
-    const startAuto = () => {
-      stopAuto();
-      autoTimer = setInterval(() => {
-        index += 1;
-        goTo(index);
-        updateDots();
-      }, AUTO_MS);
-    };
-
-    const stopAuto = () => {
-      if (autoTimer) clearInterval(autoTimer);
-      autoTimer = null;
-    };
-
-    const pauseAuto = (ms = PAUSE_AFTER_INTERACT) => {
-      stopAuto();
-      if (pauseTimer) clearTimeout(pauseTimer);
-      pauseTimer = setTimeout(startAuto, ms);
-    };
-
-    carousel.addEventListener('pointerdown', () => pauseAuto(PAUSE_AFTER_INTERACT));
-    carousel.addEventListener('pointerup', () => pauseAuto(PAUSE_AFTER_INTERACT));
-    dotsWrap?.addEventListener('click', () => pauseAuto(PAUSE_AFTER_INTERACT));
-
-    let startX = 0;
-    let dragging = false;
-
-    carousel.addEventListener('pointerdown', (e) => {
-      dragging = true;
-      startX = e.clientX;
-      carousel.setPointerCapture(e.pointerId);
-    });
-
-    carousel.addEventListener('pointerup', (e) => {
-      if (!dragging) return;
-      dragging = false;
-      const dx = e.clientX - startX;
-      if (dx > 40) { index -= 1; goTo(index); }
-      if (dx < -40) { index += 1; goTo(index); }
-      updateDots();
-      pauseAuto(PAUSE_AFTER_INTERACT);
-    });
-
-    buildClones();
-requestAnimationFrame(() => {
-  requestAnimationFrame(() => startAuto());
-});
-
-// try to force videos to start (autoplay-safe)
-setTimeout(() => {
-  track.querySelectorAll('video').forEach(v => {
-    v.muted = true;
-    const p = v.play();
-    if (p) p.catch(() => {});
-  });
-}, 200);
-
-    window.addEventListener('resize', () => buildClones());
-  }
-
-  document.querySelectorAll('section.our-work').forEach(initWorkCarousel);
-
-})();
-</script>
+    })();
+  </script>
 
 </body>
+
 </html>
